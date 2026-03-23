@@ -1,0 +1,107 @@
+@use '../mixins';
+
+.heading {
+  &-h1 {
+    font-size: 72px;
+
+    @include mixins.tablet {
+      font-size: 56px;
+    }
+
+    @include mixins.mobile {
+      font-size: 40px;
+    }
+
+    @include mixins.small-mobile {
+      font-size: 34px;
+    }
+  }
+
+  &-h2 {
+    font-size: 56px;
+
+    @include mixins.tablet {
+      font-size: 46px;
+    }
+
+    @include mixins.mobile {
+      font-size: 36px;
+    }
+
+    @include mixins.small-mobile {
+      font-size: 30px;
+    }
+  }
+
+  &-h3 {
+    font-size: 40px;
+
+    @include mixins.tablet {
+      font-size: 32px;
+    }
+
+    @include mixins.mobile {
+      font-size: 26px;
+    }
+
+    @include mixins.small-mobile {
+      font-size: 24px;
+    }
+  }
+
+  &-h4 {
+    font-size: 36px;
+
+    @include mixins.mobile {
+      font-size: 24px;
+    }
+  }
+
+  &-h5 {
+    font-size: 32px;
+
+    @include mixins.tablet {
+      font-size: 28px;
+    }
+
+    @include mixins.mobile {
+      font-size: 24px;
+    }
+
+    @include mixins.small-mobile {
+      font-size: 22px;
+    }
+  }
+
+  &-h1,
+  &-h2,
+  &-h3,
+  &-h4,
+  &-h5 {
+    line-height: 120%;
+  }
+}
+
+.text {
+  &-p {
+    &-subtitle {
+      font-size: 32px;  
+    }
+
+    &-large {
+      font-size: 24px;
+    }
+
+    &-medium {
+      font-size: 18px;
+    }
+
+    &-default {
+      font-size: 16px;
+    }
+
+    &-small {
+      font-size: 14px;
+    }
+  }
+}
