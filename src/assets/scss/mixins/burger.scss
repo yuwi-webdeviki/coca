@@ -1,3 +1,5 @@
+@use './media';
+
 @mixin burger {
   --burger-width: 28px;
   --burger-height: 22px;
@@ -10,7 +12,7 @@
   color: var(--neutral-color-140);
   background-color: transparent;
 
-  @include small-tablet {
+  @include media.small-tablet {
     display: block;
   }
 
