@@ -1,7 +1,10 @@
+@use '../mixins';
+
 :root {
   // neutral colors
   --neutral-color-10: #fff;
   --neutral-color-20: #f5f5f5;
+  --neutral-color-40: #ced1d8;
   --neutral-color-60: #18181d;
   --neutral-color-100: #1d1e25;
   --neutral-color-120: #828282;
@@ -11,18 +14,25 @@
   // primary colors
   --primary-color-50: #4e7ddb;
 
+  // success
+
   // logo colors
   --logo-color-text: #101010;
   --logo-color-circle: #101010;
 
-  // container 
+  // container
   --container-padding: 15px;
   --container-width: 1200px;
+
+  @include mixins.mobile {
+    --container-width: 480px;
+  }
 
   // transition
   --transition: 0.3s ease-in-out;
 
   // z-index
+  --z-index-negative-1: -1;
   --z-index-1: 1;
   --z-index-2: 2;
   --z-index-3: 3;

@@ -85,7 +85,38 @@
 .text {
   &-p {
     &-subtitle {
-      font-size: 32px;  
+      @include mixins.flex-align-center;
+      gap: 27px;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 131%;
+      letter-spacing: -0.03em;
+      color: var(--neutral-color-100);
+
+      @include mixins.tablet {
+        font-size: 28px;
+      }
+
+      @include mixins.mobile {
+        font-size: 24px;
+      }
+
+      @include mixins.small-mobile {
+        font-size: 20px;
+      }
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 76px;
+        height: 1px;
+        background-color: var(--neutral-color-100);
+        transform: translateY(-20px);
+
+        @include mixins.mini-desktop {
+          display: none;
+        }
+      }
     }
 
     &-large {
