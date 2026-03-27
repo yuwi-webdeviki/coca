@@ -20,9 +20,20 @@
   --logo-color-text: #101010;
   --logo-color-circle: #101010;
 
+  // overview colors
+  --overview-bg-color: #1d1e25;
+
   // container
   --container-padding: 15px;
   --container-width: 1200px;
+
+  @include mixins.mini-desktop {
+    --container-width: 1000px;
+  }
+
+  @include mixins.tablet {
+    --container-width: 860px;
+  }
 
   @include mixins.mobile {
     --container-width: 480px;
@@ -48,4 +59,7 @@
   // logo
   --logo-color-text: #fff;
   --logo-color-circle: #343542;
+
+  // overview colors
+  --overview-bg-color: #18181d;
 }

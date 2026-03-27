@@ -111,7 +111,7 @@
         width: 76px;
         height: 1px;
         background-color: var(--neutral-color-100);
-        transform: translateY(-20px);
+        transform: translateY(-43px);
 
         @include mixins.mini-desktop {
           display: none;
@@ -125,6 +125,10 @@
 
     &-medium {
       font-size: 18px;
+
+      @include mixins.mobile {
+        font-size: 16px;
+      }
     }
 
     &-default {
