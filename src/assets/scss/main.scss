@@ -4,6 +4,10 @@
 
 // components
 @use './components/header';
+@use './components/partners';
+
+// home;
 @use './components/home/hero';
 @use './components/home/overview';
 @use './components/home/features';
+@use './components/home/strength';

@@ -1,0 +1,137 @@
+@use '../../mixins';
+
+.strength {
+  &__container {
+    border-bottom: 1px solid var(--neutral-color-30);
+    padding-top: 66px;
+    padding-bottom: 160px;
+
+    @include mixins.mobile {
+      padding-top: 26px;
+      padding-bottom: 70px;
+    }
+  }
+
+  &__list {
+    @include mixins.flex-align-center;
+
+    @include mixins.tablet {
+      gap: 82px;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+
+    @include mixins.small-tablet {
+      gap: 62px;
+    }
+  }
+
+  &__item {
+    @include mixins.tablet {
+      justify-content: center;
+      min-width: 325px;
+    }
+
+    @include mixins.mobile {
+      min-width: 240px;
+    }
+
+    &:not(:last-child) {
+      @include mixins.flex-align-center;
+      gap: 72px;
+      margin-right: 72px;
+
+      @include mixins.tablet {
+        margin-right: 0;
+      }
+
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 1px;
+        height: 99px;
+        background-color: var(--neutral-color-40);
+
+        @include mixins.tablet {
+          display: none;
+        }
+      }
+    }
+
+    &-text {
+      font-weight: 500;
+      line-height: 178%;
+      color: var(--neutral-color-150);
+    }
+
+    &-num {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      font-size: 64px;
+      line-height: 120%;
+      color: var(--neutral-color-100);
+
+      @include mixins.tablet {
+        font-size: 54px;
+      }
+
+      @include mixins.mobile {
+        font-size: 48px;
+      }
+
+      @include mixins.small-mobile {
+        font-size: 42px;
+      }
+    }
+  }
+
+  &__list,
+  &__img {
+    margin-bottom: 80px;
+  }
+
+  &__list {
+    @include mixins.mobile {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__img {
+    @include mixins.tablet {
+      margin-bottom: 60px;
+    }
+
+    @include mixins.mobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__info {
+    @include mixins.flex-justify-between;
+
+    @include mixins.tablet {
+      gap: 25px;
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+  }
+
+  &__descr {
+    max-width: 421px;
+    font-weight: 500;
+    line-height: 178%;
+    color: var(--neutral-color-150);
+
+    @include mixins.tablet {
+      max-width: 700px;
+    }
+  }
+}
