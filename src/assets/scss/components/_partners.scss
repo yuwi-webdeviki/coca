@@ -1,10 +1,10 @@
 @use '../mixins';
 
 .partners {
-  padding: 86px 0;
+  padding: 108px 0;
 
   @include mixins.mobile {
-    padding: 66px 0;
+    padding: 76px 0;
   }
 
   &__container {
