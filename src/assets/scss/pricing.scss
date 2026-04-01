@@ -1,0 +1,10 @@
+@use './mixins';
+@use './base';
+@use './globals';
+
+// components
+@use './components/header';
+@use './components/footer';
+
+// home
+@use './components/pricing/hero';
