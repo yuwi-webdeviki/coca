@@ -121,6 +121,10 @@
 
     &-large {
       font-size: 24px;
+
+      @include mixins.mobile {
+        font-size: 18px;
+      }
     }
 
     &-medium {
