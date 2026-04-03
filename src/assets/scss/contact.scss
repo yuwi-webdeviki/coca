@@ -1,0 +1,12 @@
+@use './mixins';
+@use './base';
+@use './globals';
+
+// components
+@use './components/header';
+@use './components/partners';
+@use './components/footer';
+
+// home;
+@use './components/contact/map';
+@use './components/contact/get-started';

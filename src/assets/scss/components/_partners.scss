@@ -10,6 +10,7 @@
   &__container {
     @include mixins.flex-all-between;
     gap: 30px;
+    max-width: 1110px;
 
     @include mixins.small-tablet {
       flex-direction: column;

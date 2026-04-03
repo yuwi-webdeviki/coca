@@ -9,13 +9,16 @@ export default defineConfig({
     port: 3000,
     open: true,
   },
+  publicDir: './src/assets',
   build: {
     outDir: '../dist',
     emptyOutDir: true,
     rollupOptions: {
       input: {
         main: './src/index.html',
+        about: './src/about.html',
         pricing: './src/pricing.html',
+        contact: './src/contact.html',
       },
     },
   },

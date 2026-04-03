@@ -27,6 +27,7 @@
     "vite-plugin-minify": "^2.1.0"
   },
   "dependencies": {
+    "intl-tel-input": "^26.9.1",
     "swiper": "^12.1.3"
   }
 }
