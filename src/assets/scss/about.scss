@@ -6,6 +6,7 @@
 @use './components/header';
 @use './components/footer';
 
-// pricing
-@use './components/pricing/hero';
-@use './components/pricing/faq';
+// about
+@use './components/about/hero';
+@use './components/about/ideas';
+@use './components/about/team';
