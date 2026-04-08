@@ -1,0 +1,122 @@
+@use '../../mixins';
+
+.articles {
+  overflow: hidden;
+  padding: 160px 0 204px;
+
+  @include mixins.tablet {
+    padding: 90px 0 150px;
+  }
+
+  @include mixins.mobile {
+    padding: 60px 0 100px;
+  }
+  
+  @include mixins.small-mobile {
+    padding: 50px 0 60px;
+  }
+
+  &__head {
+    @include mixins.flex-all-between;
+    margin-bottom: 80px;
+
+    @include mixins.mobile {
+      gap: 30px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @include mixins.mobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+
+    @include mixins.mobile {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__descr {
+    max-width: 435px;
+    font-weight: 500;
+    line-height: 178%;
+    color: var(--neutral-color-150);
+  }
+
+  &__nav {
+    @include mixins.flex-align-center;
+    gap: 16px;
+  }
+
+  &__button {
+    border: 1px solid var(--neutral-color-30);
+    border-radius: 50%;
+    padding: 16px;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+  }
+
+  &__slider {
+    overflow: visible !important;
+    margin-right: -100px;
+    padding-right: 100px;
+  }
+
+  &__slide {
+    max-width: 405px;
+
+    @include mixins.mobile {
+      max-width: 320px;
+    }
+
+    &--large {
+      max-width: 476px;
+
+      @include mixins.mobile {
+      max-width: 340px;
+      }
+    }
+
+    &-img {
+      margin-bottom: 24px;
+    }
+
+    &-title {
+      margin-bottom: 16px;
+      font-weight: 600;
+      line-height: 131%;
+      letter-spacing: -0.03em;
+      color: var(--neutral-color-100);
+    }
+
+    &-descr {
+      margin-bottom: 24px;
+      font-weight: 500;
+      line-height: 178%;
+      color: var(--neutral-color-150);
+    }
+
+    &-btn {
+      display: inline-block;
+      border: 1px solid var(--neutral-color-30);
+      border-radius: 100px;
+      padding: 16px 45px;
+      font-weight: 700;
+      line-height: 150%;
+      color: var(--neutral-color-100);
+      transition: opacity var(--transition);
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}

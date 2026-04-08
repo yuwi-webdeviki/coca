@@ -1,0 +1,185 @@
+@use '../../mixins';
+
+.hero {
+  // overflow: hidden;
+  padding: 95px 0 0;
+
+  @include mixins.tablet {
+    padding: 65px 0 0;
+  }
+
+  @include mixins.mobile {
+    padding: 65px 0 0;
+  }
+
+  @include mixins.small-mobile {
+    padding: 25px 0 0;
+  }
+
+  &::before {
+    top: 10px;
+  }
+
+  &::after {
+    bottom: -360px;
+  }
+
+  @include mixins.tablet {
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+
+  &__title {
+    margin-bottom: 53px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+
+    @include mixins.tablet {
+      margin-bottom: 33px;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 128px;
+    max-width: 754px;
+
+    @include mixins.tablet {
+      margin-bottom: 58px;
+    }
+
+    @include mixins.small-mobile {
+      margin-bottom: 38px;
+    }
+  }
+
+  &__buttons {
+    @include mixins.flex-align-center;
+    gap: 15px 30px;
+    flex-wrap: wrap;
+    margin-bottom: 90px;
+
+    @include mixins.tablet {
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__button {
+    font-weight: 500;
+    line-height: 150%;
+    color: var(--neutral-color-150);
+
+    &--active {
+      position: relative;
+      font-weight: 600;
+      color: var(--neutral-color-100);
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 3px;
+        bottom: -3px;
+        left: 4px;
+        height: 1px;
+        background-color: var(--neutral-color-100);
+      }
+    }
+  }
+
+  &__slider {
+    position: relative;
+    overflow: visible !important;
+    margin-right: -100px;
+    padding-right: 100px;
+
+    &-section {
+      overflow: hidden;
+    }
+
+    &-container {
+      padding-bottom: 168px;
+
+      @include mixins.tablet {
+        padding-bottom: 108px;
+      }
+
+      @include mixins.small-tablet {
+        padding-bottom: 48px;
+      }
+    }
+  }
+
+  &__slide {
+    max-width: 515px;
+
+    @include mixins.small-tablet {
+      max-width: 400px;
+    }
+
+    @include mixins.mobile {
+      max-width: 300px;
+    }
+
+    &-btns {
+      @include mixins.flex-all-center;
+      position: absolute;
+      top: 164px;
+      left: -50px;
+      z-index: var(--z-index-3);
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      background-color: #fff;
+
+      @include mixins.mini-desktop {
+        display: none;
+      }
+    }
+
+    &--hidden {
+      display: none !important;
+    }
+
+    &-img {
+      margin-bottom: 16px;
+    }
+
+    &-date {
+      margin-bottom: 24px;
+      font-weight: 400;
+      line-height: 150%;
+      color: var(--neutral-color-150);
+    }
+
+    &-title {
+      margin-bottom: 16px;
+      font-weight: 700;
+      line-height: 125%;
+      letter-spacing: -0.03em;
+      color: var(--neutral-color-100);
+    }
+
+    &-descr {
+      max-width: 332px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 150%;
+      color: var(--neutral-color-150);
+
+      &--long {
+        max-width: 493px;
+      }
+
+      @include mixins.small-tablet {
+        font-size: 16px;
+      }
+
+      @include mixins.mobile {
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -6,5 +6,7 @@
 @use './components/header';
 @use './components/footer';
 
-// blog
-@use './components/blog/post';
+// activity
+@use './components/activity/hero';
+@use './components/activity/posts';
+@use './components/activity/articles';

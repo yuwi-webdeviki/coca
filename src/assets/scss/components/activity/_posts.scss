@@ -1,0 +1,69 @@
+@use '../../mixins';
+
+.posts {
+  padding: 120px 0;
+  background-color: var(--black-bg-color);
+
+  @include mixins.mobile {
+    padding: 60px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__container {
+    column-count: 2;
+    gap: 32px;
+
+    @include mixins.mobile {
+      column-count: 1;
+    }
+  }
+
+  &__article {
+    break-inside: avoid;
+    max-width: 584px;
+
+    &--mb {
+      margin-bottom: 159px;
+
+      @include mixins.tablet {
+        margin-bottom: 0;
+      }
+    }
+
+    @include mixins.small-desktop {
+      max-width: 450px;
+    }
+
+    @include mixins.tablet {
+      margin-bottom: 50px;
+    }
+
+    @include mixins.mobile {
+      max-width: 320px;
+    }
+  }
+
+  &__img,
+  &__title {
+    margin-bottom: 24px;
+
+    @include mixins.mobile {
+      margin-bottom: 14px;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    color: #fff;
+  }
+
+  &__descr {
+    font-weight: 500;
+    line-height: 178%;
+    color: var(--neutral-color-150);
+  }
+}
