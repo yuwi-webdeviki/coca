@@ -146,7 +146,7 @@
     max-width: 360px;
     font-weight: 500;
     line-height: 178%;
-    color: #7e8492;
+    color: var(--neutral-color-150);
 
     @include mixins.mini-desktop {
       max-width: 700px;
@@ -179,7 +179,7 @@
       width: 20px;
       height: 20px;
       color: #46b277;
-      background: url('../../../icons/features-tick-icon.svg') no-repeat
+      background: url('/assets/icons/features-tick-icon.svg') no-repeat
         center / contain;
     }
   }

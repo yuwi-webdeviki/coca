@@ -1,4 +1,4 @@
-import '../assets/scss/activity.scss';
+import '/scss/activity.scss';
 
 // components
 import { useTheme } from './components/theme.js';

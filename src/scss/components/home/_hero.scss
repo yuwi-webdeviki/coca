@@ -220,7 +220,7 @@
           color: #60d39c;
 
           &::before {
-            background: url('../../../icons/arrow-up.svg') no-repeat center /
+            background: url('/assets/icons/arrow-up.svg') no-repeat center /
               contain;
           }
         }
@@ -229,7 +229,7 @@
           color: #e35454;
 
           &::before {
-            background: url('../../../icons/arrow-down.svg') no-repeat center /
+            background: url('/assets/icons/arrow-down.svg') no-repeat center /
               contain;
           }
         }
